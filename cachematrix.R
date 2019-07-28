@@ -1,8 +1,9 @@
 ## This functions enables to cache the result of the solve (inverse
 ## matrix) operation from a invertible matrix
 
-## This functions ret'urns a list containing the methods for accessing
-## the invertible matrix or the cached inverse matrix
+## This functions returns a list containing the methods for accessing
+## the invertible matrix or the cached inverse matrix (get, set, 
+## getinvmatrix, setinvmatrix)
 makeCacheMatrix <- function(x = matrix()) {
   im <- NULL
   set <- function(y) {
@@ -17,7 +18,8 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Tests if the a cached result is present in x, otherwise operates
-## and cache the result of solve into x
+## and cache the result of solve into x. Always returns the inverse of
+## matrix.
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
   im <- x$getinvmatrix()
