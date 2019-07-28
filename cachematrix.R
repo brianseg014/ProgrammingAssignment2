@@ -1,7 +1,7 @@
 ## This functions enables to cache the result of the solve (inverse
 ## matrix) operation from a invertible matrix
 
-## This functions returns a list containing the methods for accessing
+## This functions ret'urns a list containing the methods for accessing
 ## the invertible matrix or the cached inverse matrix
 makeCacheMatrix <- function(x = matrix()) {
   im <- NULL
@@ -26,7 +26,7 @@ cacheSolve <- function(x, ...) {
     return (im)
   }
   data <- x$get()
-  im <- solve(data)
+  im <- solve(data, ...)
   x$setinvmatrix(im)
   im
 }
